@@ -72,12 +72,8 @@ namespace ValidateTextBoxComponent
                     colorRojo = false;
                     for (int i = 0; i < texto.Length; i++)
                     {
-                        //if(Multilinea && texto[i] == '\r' && texto[i+1] != '\n')
-                        //{
-                        //    colorRojo = true;
-                        //}else
-                        if ((texto[i] < 'a' || texto[i] > 'z') && texto[i] != ' ' && texto[i] != 'ñ')
-                        {                            
+                        if (!Char.IsLetter(texto[i]) && texto[i] != ' ' && texto[i] != '\r' && texto[i] != '\n')
+                        {                   
                             colorRojo = true;
                         }
                     }
