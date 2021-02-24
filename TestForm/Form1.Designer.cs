@@ -47,10 +47,10 @@ namespace TestForm
             this.validateTextBox1.Location = new System.Drawing.Point(70, 33);
             this.validateTextBox1.Multilinea = true;
             this.validateTextBox1.Name = "validateTextBox1";
-            this.validateTextBox1.Size = new System.Drawing.Size(477, 40);
+            this.validateTextBox1.Size = new System.Drawing.Size(554, 40);
             this.validateTextBox1.TabIndex = 0;
             this.validateTextBox1.Texto = "";
-            this.validateTextBox1.Tipo = ValidateTextBoxComponent.eTipo.Numerico;
+            this.validateTextBox1.Tipo = ValidateTextBoxComponent.eTipo.Textual;
             this.validateTextBox1.TxtChanged += new System.EventHandler(this.validateTextBox1_TxtChanged);
             // 
             // Form1

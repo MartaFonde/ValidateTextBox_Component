@@ -72,8 +72,12 @@ namespace ValidateTextBoxComponent
                     colorRojo = false;
                     for (int i = 0; i < texto.Length; i++)
                     {
-                        if (texto[i] < 'a' || texto[i] > 'z' && texto[i] != ' ')
-                        {
+                        //if(Multilinea && texto[i] == '\r' && texto[i+1] != '\n')
+                        //{
+                        //    colorRojo = true;
+                        //}else
+                        if ((texto[i] < 'a' || texto[i] > 'z') && texto[i] != ' ' && texto[i] != 'ñ')
+                        {                            
                             colorRojo = true;
                         }
                     }
@@ -128,7 +132,7 @@ namespace ValidateTextBoxComponent
 
             Pen p = new Pen(colorRojo ? Color.Red : Color.Green);
             p.Width = 3;
-            e.Graphics.DrawRectangle(p, new Rectangle(5, 5, this.Width - 5, this.Height - 5));
+            e.Graphics.DrawRectangle(p, new Rectangle(5, 5, this.Width - 10, this.Height - 10));
 
             e.Dispose();
         }
